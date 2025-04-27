@@ -1,0 +1,456 @@
+/* Modern Colors */
+:root {
+  --primary-color: #6366f1; /* インディゴ */
+  --primary-dark: #4f46e5;
+  --primary-light: #818cf8;
+  --secondary-color: #10b981; /* エメラルド */
+  --secondary-dark: #059669;
+  --danger-color: #ef4444; /* レッド */
+  --danger-dark: #dc2626;
+  --success-color: #22c55e; /* グリーン */
+  --warning-color: #f59e0b; /* アンバー */
+  --info-color: #3b82f6; /* ブルー */
+  --text-light: #ffffff;
+  --text-dark: #111827;
+  --bg-dark: #1e293b; /* スレート */
+  --bg-darker: #0f172a;
+  --bg-light: #334155;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  /* モダンなグラデーション */
+  --gradient-purple: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+  --gradient-blue: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+  --gradient-green: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+  --gradient-red: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%);
+  --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* Layout utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Spacing & Shapes */
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+/* Typography */
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+/* Modern Colors */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-danger {
+  background-color: var(--danger-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-success {
+  background-color: var(--success-color);
+}
+
+.bg-warning {
+  background-color: var(--warning-color);
+}
+
+.bg-info {
+  background-color: var(--info-color);
+}
+
+.bg-dark {
+  background-color: var(--bg-darker);
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+.bg-gradient-purple {
+  background: var(--gradient-purple);
+}
+
+.bg-gradient-blue {
+  background: var(--gradient-blue);
+}
+
+.bg-gradient-green {
+  background: var(--gradient-green);
+}
+
+.bg-gradient-red {
+  background: var(--gradient-red);
+}
+
+.bg-gradient-dark {
+  background: var(--gradient-dark);
+}
+
+/* Modern buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  letter-spacing: 0.025em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-primary:active {
+  background-color: var(--primary-dark);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: var(--text-light);
+}
+
+.btn-danger:active {
+  background-color: var(--danger-dark);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+.btn-secondary:active {
+  background-color: var(--secondary-dark);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: var(--text-light);
+}
+
+.btn-success:active {
+  background-color: var(--secondary-dark);
+}
+
+/* Glass effect card */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Stylish Health bars */
+.health-bar {
+  height: 0.75rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.health-bar-fill {
+  height: 100%;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.health-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.health-bar-fill.player {
+  background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+}
+
+.health-bar-fill.enemy {
+  background: linear-gradient(90deg, #dc2626 0%, #ef4444 100%);
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+/* 背景アニメーション */
+.animated-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  transform: rotate(0deg);
+  animation: rotate 30s linear infinite;
+  z-index: 0;
+}
+
+.animated-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
